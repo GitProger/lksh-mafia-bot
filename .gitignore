@@ -2,3 +2,5 @@
 *.iml
 __pycache__
 bot/token.txt
+bot/ok/token.txt
+
