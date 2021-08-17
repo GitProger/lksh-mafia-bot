@@ -6,11 +6,9 @@ class Game:
         self.id = i
         self.players = p
         self.roles = r
-        self.started = False
     def free(self):
         return len(self.roles) - len(self.players)
     def start(self):
-        self.started = True
         random.shuffle(self.roles)
         for i in range(len(self.players)):
             user_id, role = self.players[i], self.roles[i]
@@ -29,7 +27,6 @@ class BotStatus:
         return game_id
 
     def add_user(self, user_id, game_id):
-        print(self.games)
         if game_id not in self.games:
             return 1, -1
         self.games[game_id].players.append(user_id)

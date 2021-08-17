@@ -1,5 +1,4 @@
 import re
-
 from bot import bot
 import messages, objects, gameplay
 
